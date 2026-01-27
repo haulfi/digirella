@@ -1,0 +1,129 @@
+<!doctype html>
+<!--===========================================================================================================================
+  DigiRella - Agricultural Decision Support System
+  Interactive web interface for farm recommendations and scenario analysis
+===========================================================================================================================-->
+<html lang="az">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Digirella - Fermer Asistenti</title>
+
+    <!--------------------------------------------------------------------------------------------------------------------------
+      External Stylesheets
+    --------------------------------------------------------------------------------------------------------------------------->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!--------------------------------------------------------------------------------------------------------------------------
+      Header Section
+    --------------------------------------------------------------------------------------------------------------------------->
+    <header>
+      <div class="brand">
+        <img src="logo.png" alt="Digirella logo" />
+      </div>
+      <h1>Alfalfa Fermer Asistenti</h1>
+      <p>Ssenari seçimi, tövsiyələr və sadə chatbot.</p>
+    </header>
+
+    <!--------------------------------------------------------------------------------------------------------------------------
+      Main Content Area
+    --------------------------------------------------------------------------------------------------------------------------->
+    <main class="wrap">
+
+      <!--------------------------------------------------------------------------------------------------------------------------
+        Panel 1: API Connection and Farm Type Selection
+      --------------------------------------------------------------------------------------------------------------------------->
+      <section class="panel">
+        <h2>1) Bağlantı və təsərrüfat tipi</h2>
+        <small>API baza ünvanı: FastAPI işləyən host/port.</small>
+        <div class="toolbar">
+          <label for="apiBase">API</label>
+          <!-- <input id="apiBase" type="text" value="http://127.0.0.1:8000" /> Running on localhost-->
+          <input id="apiBase" type="text" value="https://digirella-alfalfa.onrender.com" />
+          <button id="connectBtn">Bağlan</button>
+          <button id="resetBtn" class="secondary">Sıfırla</button>
+          <span class="status" id="statusText">Gözləmə rejimi.</span>
+        </div>
+        <div class="list" id="farmTypes"></div>
+      </section>
+
+      <!--------------------------------------------------------------------------------------------------------------------------
+        Panel 2: Scenario Selection
+      --------------------------------------------------------------------------------------------------------------------------->
+      <section class="panel">
+        <h2>2) Ssenari seçimi</h2>
+        <small id="scenarioHint">Əvvəl təsərrüfat tipini seçin.</small>
+        <div class="list" id="scenarioList"></div>
+      </section>
+
+      <!--------------------------------------------------------------------------------------------------------------------------
+        Panel 3: Recommendations Display
+      --------------------------------------------------------------------------------------------------------------------------->
+      <section class="panel">
+        <h2>3) Günün nəticəsi</h2>
+        <div class="pill" id="selectionPill">Təsərrüfat tipi: seçilməyib</div>
+        <div class="columns">
+          <div>
+            <h3>Edilməli</h3>
+            <div id="doList"></div>
+          </div>
+          <div>
+            <h3>Edilməməli</h3>
+            <div id="dontList"></div>
+          </div>
+        </div>
+      </section>
+
+      <!--------------------------------------------------------------------------------------------------------------------------
+        Panel 4: Chatbot Interface
+      --------------------------------------------------------------------------------------------------------------------------->
+      <section class="panel">
+        <h2>4) Chatbot</h2>
+        <small>Qeyd: Chatbot hər sorğuda ssenari 1-i seçir.</small>
+        <div class="chat" id="chatArea"></div>
+        <div class="chat-input">
+          <input id="chatInput" type="text" placeholder="Bu gün nə etməliyəm?" />
+          <button id="chatSend">Göndər</button>
+        </div>
+      </section>
+
+    </main>
+
+    <!--------------------------------------------------------------------------------------------------------------------------
+      Footer with Documentation Button
+    --------------------------------------------------------------------------------------------------------------------------->
+    <footer class="footer">
+      <button id="docsBtn" class="docs-button">
+        📖 Dokumentasiya
+      </button>
+      <p class="footer-text">DigiRella v1.0.0 - Kənd Təsərrüfatı Qərar Dəstək Sistemi</p>
+    </footer>
+
+    <!--------------------------------------------------------------------------------------------------------------------------
+      Documentation Modal
+    --------------------------------------------------------------------------------------------------------------------------->
+    <div id="docsModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>📖 Dokumentasiya</h2>
+          <button id="docsClose" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body" id="docsContent">
+          <!-- Documentation content will be injected here by docs.js -->
+        </div>
+      </div>
+    </div>
+
+    <!--------------------------------------------------------------------------------------------------------------------------
+      External JavaScript Files
+      Order matters: config → api → ui → app → docs (main application logic)
+    --------------------------------------------------------------------------------------------------------------------------->
+    <script src="config.js"></script>
+    <script src="api.js"></script>
+    <script src="ui.js"></script>
+    <script src="app.js"></script>
+    <script src="docs.js"></script>
+  </body>
+</html>

@@ -16,6 +16,14 @@
 - **Interactive UI**: Web-based interface with scenario selection and chatbot
 - **Extensible Architecture**: Plugin-style model registration with decorator pattern
 
+## 🌐 Live Demo
+
+- **Frontend**: [https://haulfi.github.io/digirella/](https://haulfi.github.io/digirella/)
+- **Backend API**: [https://digirella-alfalfa.onrender.com](https://digirella-alfalfa.onrender.com)
+- **API Docs**: [https://digirella-alfalfa.onrender.com/docs](https://digirella-alfalfa.onrender.com/docs)
+
+The live demo is fully functional. Select a farm type, choose a scenario, and explore AI-powered farming recommendations.
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -37,25 +45,31 @@
    pip install -r requirements.txt
    ```
 
-3. **Code Change idex.html line:43**
-    delete:
-      <input id="apiBase" type="text" value="https://digirella-alfalfa.onrender.com" /> <!--Running on render.com-->
-    uncomment:
-      <!-- <input id="apiBase" type="text" value="http://127.0.0.1:8000" /> Running on localhost-->
-
-4. **Start the backend server**
+3. **Start the backend server**
    ```bash
+   cd backend
    uvicorn app:app --reload --host 0.0.0.0 --port 8000
    ```
 
-5. **Open the frontend**
-   - Open `frontend/index.html` in your browser
+4. **Open the frontend**
+   - Open `docs/index.html` in your browser
    - Or serve with a local web server:
      ```bash
-     cd frontend
+     cd docs
      python -m http.server 8080
      ```
    - Navigate to `http://localhost:8080`
+
+5. **Update API URL for local development**
+   - Open `docs/index.html`
+   - Change line 44 from:
+     ```html
+     <input id="apiBase" type="text" value="https://digirella-alfalfa.onrender.com" />
+     ```
+   - To:
+     ```html
+     <input id="apiBase" type="text" value="http://127.0.0.1:8000" />
+     ```
 
 ## 📁 Project Structure
 
@@ -73,16 +87,19 @@ DigiRella/
 │   ├── orchard/              # Fruit tree model
 │   ├── greenhouse/           # Protected crop model
 │   └── mixed/                # Mixed farm operations
-├── frontend/                   # Web UI
+├── docs/                       # Frontend & Documentation (GitHub Pages)
 │   ├── index.html            # Main page
 │   ├── app.js                # Application logic
 │   ├── api.js                # API client
 │   ├── ui.js                 # UI rendering
+│   ├── docs.js               # Documentation modal
 │   ├── config.js             # Configuration
-│   └── styles.css            # Styling
+│   ├── styles.css            # Styling
+│   ├── logo.png              # Brand logo
+│   └── documentation_az.md   # Azerbaijani docs
 ├── assets/                     # Test scenarios
 │   └── farms/                # Farm-specific scenarios
-└── docs/                       # Documentation
+├── frontend/                   # Original frontend (archived)
 └── requirements.txt          # Python dependencies
 ```
 

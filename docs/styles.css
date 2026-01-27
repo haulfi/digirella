@@ -1,0 +1,604 @@
+/*===========================================================================================================================
+  DigiRella Frontend Styles
+  Main stylesheet for the agricultural decision support system UI
+===========================================================================================================================*/
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  CSS Variables - Design System
+----------------------------------------------------------------------------------------------------------------------------*/
+:root {
+  --bg: #ffffff;
+  --bg-2: #ffffff;
+  --ink: #000000;
+  --muted: #3a3a3a;
+  --accent: #7dc819;
+  --accent-2: #5aa10f;
+  --card: #ffffff;
+  --border: #e3e3e3;
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Base Styles
+----------------------------------------------------------------------------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Background Decorative Elements
+----------------------------------------------------------------------------------------------------------------------------*/
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  filter: blur(2px);
+  z-index: -1;
+}
+
+body::before {
+  top: -120px;
+  right: -80px;
+  background: radial-gradient(circle, rgba(125, 200, 25, 0.16), transparent 70%);
+}
+
+body::after {
+  bottom: -140px;
+  left: -120px;
+  background: radial-gradient(circle, rgba(125, 200, 25, 0.14), transparent 70%);
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Header Styles
+----------------------------------------------------------------------------------------------------------------------------*/
+header {
+  position: relative;
+  text-align: center;
+  padding: 36px 20px 16px;
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  letter-spacing: 0.02em;
+}
+
+header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Brand Logo
+----------------------------------------------------------------------------------------------------------------------------*/
+.brand {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand img {
+  height: 64px;
+  width: auto;
+  display: block;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Main Container
+----------------------------------------------------------------------------------------------------------------------------*/
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto 48px;
+  padding: 0 20px 40px;
+  display: grid;
+  gap: 18px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Panel - Main Content Sections
+----------------------------------------------------------------------------------------------------------------------------*/
+.panel {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+  transition: background 0.2s ease, border 0.2s ease;
+}
+
+.panel:hover {
+  background: rgba(125, 200, 25, 0.06);
+  border-color: rgba(125, 200, 25, 0.35);
+}
+
+.panel h2 {
+  margin: 0 0 6px;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.3rem, 2.4vw, 2rem);
+}
+
+.panel small {
+  color: var(--muted);
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Toolbar - Control Elements
+----------------------------------------------------------------------------------------------------------------------------*/
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Form Elements
+----------------------------------------------------------------------------------------------------------------------------*/
+label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+input[type="text"] {
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+  min-width: 220px;
+}
+
+button {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(125, 200, 25, 0.5);
+  background: rgba(125, 200, 25, 0.16);
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background: rgba(125, 200, 25, 0.28);
+}
+
+button.secondary {
+  border-color: rgba(125, 200, 25, 0.35);
+  background: rgba(125, 200, 25, 0.12);
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Status Text
+----------------------------------------------------------------------------------------------------------------------------*/
+.status {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Grid List Layout
+----------------------------------------------------------------------------------------------------------------------------*/
+.list {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 12px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Card - Selectable Items (Farm Types, Scenarios)
+----------------------------------------------------------------------------------------------------------------------------*/
+.card {
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: 0 10px 20px rgba(38, 30, 22, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease, border 0.2s ease;
+  animation: rise 0.6s ease forwards;
+  opacity: 0;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(125, 200, 25, 0.7);
+}
+
+.card.selected {
+  border-color: var(--accent);
+  box-shadow: 0 14px 26px rgba(125, 200, 25, 0.2);
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Pill - Status Badge
+----------------------------------------------------------------------------------------------------------------------------*/
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(125, 200, 25, 0.35);
+  background: rgba(125, 200, 25, 0.08);
+  color: var(--ink);
+  font-size: 0.8rem;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Columns Layout - Recommendations Display
+----------------------------------------------------------------------------------------------------------------------------*/
+.columns {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 12px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Bucket - Category Container
+----------------------------------------------------------------------------------------------------------------------------*/
+.bucket {
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px dashed var(--border);
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Item - Individual Recommendation
+----------------------------------------------------------------------------------------------------------------------------*/
+.item {
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--border);
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Chat Interface
+----------------------------------------------------------------------------------------------------------------------------*/
+.chat {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.bubble {
+  padding: 12px 16px;
+  border-radius: 18px;
+  max-width: 540px;
+  line-height: 1.45;
+  white-space: pre-line;
+}
+
+.bubble.user {
+  margin-left: auto;
+  background: rgba(125, 200, 25, 0.12);
+  border: 1px solid rgba(125, 200, 25, 0.3);
+}
+
+.bubble.bot {
+  background: rgba(125, 200, 25, 0.08);
+  border: 1px solid rgba(125, 200, 25, 0.24);
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.chat-input input {
+  flex: 1;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Animations
+----------------------------------------------------------------------------------------------------------------------------*/
+@keyframes rise {
+  0% {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Footer Section
+----------------------------------------------------------------------------------------------------------------------------*/
+.footer {
+  position: relative;
+  text-align: center;
+  padding: 32px 20px 20px;
+  margin-top: 24px;
+}
+
+.footer-text {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.docs-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  border: 2px solid var(--accent);
+  background: rgba(125, 200, 25, 0.12);
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(125, 200, 25, 0.2);
+}
+
+.docs-button:hover {
+  transform: translateY(-2px);
+  background: rgba(125, 200, 25, 0.24);
+  box-shadow: 0 6px 20px rgba(125, 200, 25, 0.3);
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Modal - Documentation Display
+----------------------------------------------------------------------------------------------------------------------------*/
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 900px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 28px;
+  border-bottom: 2px solid var(--border);
+  background: rgba(125, 200, 25, 0.08);
+  border-radius: 20px 20px 0 0;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--ink);
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background: rgba(125, 200, 25, 0.2);
+  color: var(--ink);
+  transform: rotate(90deg);
+}
+
+.modal-body {
+  padding: 28px;
+  overflow-y: auto;
+  flex: 1;
+  line-height: 1.7;
+}
+
+/* Documentation content styling */
+.modal-body h1 {
+  font-size: 2rem;
+  margin: 0 0 16px;
+  color: var(--ink);
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 12px;
+}
+
+.modal-body h2 {
+  font-size: 1.5rem;
+  margin: 32px 0 12px;
+  color: var(--ink);
+}
+
+.modal-body h3 {
+  font-size: 1.2rem;
+  margin: 24px 0 10px;
+  color: var(--accent-2);
+}
+
+.modal-body p {
+  margin: 12px 0;
+  color: var(--ink);
+}
+
+.modal-body ul {
+  margin: 12px 0;
+  padding-left: 24px;
+}
+
+.modal-body li {
+  margin: 8px 0;
+  color: var(--ink);
+}
+
+.modal-body code {
+  background: rgba(125, 200, 25, 0.12);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  color: var(--accent-2);
+}
+
+.modal-body strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.modal-body hr {
+  border: none;
+  border-top: 2px solid var(--border);
+  margin: 24px 0;
+}
+
+/* Scrollbar styling for modal */
+.modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: rgba(125, 200, 25, 0.08);
+  border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: rgba(125, 200, 25, 0.4);
+  border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: rgba(125, 200, 25, 0.6);
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Modal Animations
+----------------------------------------------------------------------------------------------------------------------------*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------
+  Responsive Design - Mobile
+----------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 720px) {
+  header {
+    padding-top: 72px;
+  }
+
+  .brand {
+    left: 16px;
+    top: 16px;
+  }
+
+  .brand img {
+    height: 36px;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  .modal-header {
+    padding: 16px 20px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .modal-body {
+    padding: 20px;
+  }
+
+  .modal-body h1 {
+    font-size: 1.6rem;
+  }
+
+  .modal-body h2 {
+    font-size: 1.3rem;
+  }
+
+  .modal-body h3 {
+    font-size: 1.1rem;
+  }
+}
