@@ -1,0 +1,13 @@
+{
+  "farm_type": "livestock",
+  "scenario_id": "livestock_03",
+  "summary_az": "Xəstəlik + veterinar lazımdır",
+  "decision_inputs": {
+    "environment": {"temperature_c": 20, "humidity_pct": 70},
+    "resources": {"feed_kg": 550, "water_liters": 1900},
+    "production": {"milk_liters": 320},
+    "livestock": {"animal_count": 20},
+    "health": {"sick_count": 5, "disease_detected": true, "stress_signs": false},
+    "constraints": {"vet_available": true, "feed_delivery_expected": false}
+  }
+}

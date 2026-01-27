@@ -1,0 +1,13 @@
+{
+  "farm_type": "greenhouse",
+  "scenario_id": "greenhouse_07",
+  "summary_az": "Pis ventilyasiya + hava keyfiyyəti",
+  "decision_inputs": {
+    "environment": {"temperature_c": 26, "humidity_pct": 75, "co2_ppm": 1200, "light_hours": 14},
+    "ventilation": {"fan_status": "off", "vent_open_pct": 5},
+    "irrigation": {"water_available": true, "soil_moisture_pct": 29, "last_watered_hours": 10},
+    "crops": {"stage": "vegetative", "health": "good"},
+    "pests": {"whiteflies": false, "thrips": false, "aphids": false},
+    "diseases": {"fungal_signs": false, "bacterial_signs": false, "virus_signs": false}
+  }
+}

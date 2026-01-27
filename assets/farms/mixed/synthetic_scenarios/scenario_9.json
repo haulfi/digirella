@@ -1,0 +1,11 @@
+{
+  "farm_type": "mixed",
+  "scenario_id": "mixed_09",
+  "summary_az": "Hava çoxlu əməliyyatlara təsir edir",
+  "decision_inputs": {
+    "crops": {"soil_moisture_pct": 35, "stage": "flowering", "health": "good", "pest_pressure": "medium"},
+    "livestock": {"animal_count": 10, "feed_kg": 60, "water_liters": 125, "sick_count": 1},
+    "resources": {"labor_hours": 6, "water_available": true, "budget_available": false},
+    "weather": {"temperature_c": 18, "rain_mm_24h": 20, "forecast_rain_48h": 15}
+  }
+}

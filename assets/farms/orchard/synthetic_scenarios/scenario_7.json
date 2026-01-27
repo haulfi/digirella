@@ -1,0 +1,13 @@
+{
+  "farm_type": "orchard",
+  "scenario_id": "orchard_07",
+  "summary_az": "Gübrələmə vaxtı + bahar böyüməsi",
+  "decision_inputs": {
+    "weather": {"temperature_c": 18, "humidity_pct": 60, "wind_kph": 10, "rain_mm_24h": 2, "forecast_frost": false},
+    "soil": {"moisture_pct": 28, "soil_temp_c": 16},
+    "trees": {"stage": "early_growth", "fruit_load": "none", "health_status": "good"},
+    "pests": {"codling_moth_detected": false, "aphids_detected": false, "mites_detected": false},
+    "diseases": {"fire_blight_signs": false, "scab_signs": false, "mildew_signs": false},
+    "resources": {"water_available": true, "labor_available": true}
+  }
+}

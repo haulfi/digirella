@@ -1,0 +1,13 @@
+{
+  "farm_type": "livestock",
+  "scenario_id": "livestock_10",
+  "summary_az": "Stress + isti + yem az + bəzi heyvanlar xəstə",
+  "decision_inputs": {
+    "environment": {"temperature_c": 30, "humidity_pct": 78},
+    "resources": {"feed_kg": 320, "water_liters": 1200},
+    "production": {"milk_liters": 280},
+    "livestock": {"animal_count": 20},
+    "health": {"sick_count": 3, "disease_detected": false, "stress_signs": true},
+    "constraints": {"vet_available": true, "feed_delivery_expected": false}
+  }
+}

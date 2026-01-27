@@ -1,0 +1,14 @@
+{
+  "farm_type": "wheat",
+  "schema_version": "1.0",
+  "scenario_id": "WHEAT_09",
+  "scenario_number": "9",
+  "decision_inputs": {
+    "weather": { "t_max_c": 24, "t_min_c": 14, "rain_mm_24h": 0, "forecast_rain_mm_48h": 0, "wind_mps": 2, "humidity_pct": 50 },
+    "soil": { "soil_moisture_pct": 27, "soil_temp_c": 16 },
+    "crop": { "stage_code": "stem_elongation" },
+    "constraints": { "water_available": true, "irrigation_possible_today": true, "labor_hours_today": 6 },
+    "observations": { "pest_aphids_seen": true, "disease_rust_seen": false, "weed_pressure": "low" }
+  },
+  "summary_az": "Yarpaqbiti görünür + uyğun hava"
+}

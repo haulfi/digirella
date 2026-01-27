@@ -1,0 +1,13 @@
+{
+  "farm_type": "orchard",
+  "scenario_id": "orchard_08",
+  "summary_az": "Fırtına riski + güclü külək",
+  "decision_inputs": {
+    "weather": {"temperature_c": 20, "humidity_pct": 75, "wind_kph": 45, "rain_mm_24h": 15, "forecast_frost": false},
+    "soil": {"moisture_pct": 38, "soil_temp_c": 18},
+    "trees": {"stage": "fruit_development", "fruit_load": "normal", "health_status": "good"},
+    "pests": {"codling_moth_detected": false, "aphids_detected": false, "mites_detected": false},
+    "diseases": {"fire_blight_signs": false, "scab_signs": false, "mildew_signs": false},
+    "resources": {"water_available": true, "labor_available": true}
+  }
+}

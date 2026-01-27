@@ -1,0 +1,11 @@
+{
+  "farm_type": "mixed",
+  "scenario_id": "mixed_10",
+  "summary_az": "Resurs böhranlı + bitki və heyvan tələbləri",
+  "decision_inputs": {
+    "crops": {"soil_moisture_pct": 14, "stage": "fruit_development", "health": "stressed", "pest_pressure": "high"},
+    "livestock": {"animal_count": 10, "feed_kg": 18, "water_liters": 50, "sick_count": 2},
+    "resources": {"labor_hours": 4, "water_available": false, "budget_available": false},
+    "weather": {"temperature_c": 36, "rain_mm_24h": 0, "forecast_rain_48h": 0}
+  }
+}

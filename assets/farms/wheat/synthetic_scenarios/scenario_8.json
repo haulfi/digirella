@@ -1,0 +1,14 @@
+{
+  "farm_type": "wheat",
+  "schema_version": "1.0",
+  "scenario_id": "WHEAT_08",
+  "scenario_number": "8",
+  "decision_inputs": {
+    "weather": { "t_max_c": 31, "t_min_c": 18, "rain_mm_24h": 0, "forecast_rain_mm_48h": 0, "wind_mps": 3, "humidity_pct": 35 },
+    "soil": { "soil_moisture_pct": 22, "soil_temp_c": 20 },
+    "crop": { "stage_code": "grain_fill" },
+    "constraints": { "water_available": false, "irrigation_possible_today": true, "labor_hours_today": 6 },
+    "observations": { "pest_aphids_seen": false, "disease_rust_seen": false, "weed_pressure": "low" }
+  },
+  "summary_az": "Dən dolma + yüngül quraqlıq"
+}

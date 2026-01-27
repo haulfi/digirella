@@ -1,0 +1,13 @@
+{
+  "farm_type": "greenhouse",
+  "scenario_id": "greenhouse_01",
+  "summary_az": "Normal",
+  "decision_inputs": {
+    "environment": {"temperature_c": 22, "humidity_pct": 65, "co2_ppm": 400, "light_hours": 14},
+    "ventilation": {"fan_status": "on", "vent_open_pct": 30},
+    "irrigation": {"water_available": true, "soil_moisture_pct": 28, "last_watered_hours": 12},
+    "crops": {"stage": "vegetative", "health": "good"},
+    "pests": {"whiteflies": false, "thrips": false, "aphids": false},
+    "diseases": {"fungal_signs": false, "bacterial_signs": false, "virus_signs": false}
+  }
+}

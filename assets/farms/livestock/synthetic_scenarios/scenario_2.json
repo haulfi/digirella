@@ -1,0 +1,13 @@
+{
+  "farm_type": "livestock",
+  "scenario_id": "livestock_02",
+  "summary_az": "Yem çatışmazlığı + sifariş",
+  "decision_inputs": {
+    "environment": {"temperature_c": 24, "humidity_pct": 60},
+    "resources": {"feed_kg": 250, "water_liters": 1800},
+    "production": {"milk_liters": 380},
+    "livestock": {"animal_count": 20},
+    "health": {"sick_count": 0, "disease_detected": false, "stress_signs": false},
+    "constraints": {"vet_available": true, "feed_delivery_expected": false}
+  }
+}

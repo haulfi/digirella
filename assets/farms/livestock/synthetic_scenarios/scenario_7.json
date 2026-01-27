@@ -1,0 +1,13 @@
+{
+  "farm_type": "livestock",
+  "scenario_id": "livestock_07",
+  "summary_az": "Veterinar əlçatmaz + təcili əlaqə",
+  "decision_inputs": {
+    "environment": {"temperature_c": 23, "humidity_pct": 68},
+    "resources": {"feed_kg": 560, "water_liters": 1950},
+    "production": {"milk_liters": 360},
+    "livestock": {"animal_count": 20},
+    "health": {"sick_count": 4, "disease_detected": true, "stress_signs": false},
+    "constraints": {"vet_available": false, "feed_delivery_expected": false}
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "farm_type": "greenhouse",
+  "scenario_id": "greenhouse_05",
+  "summary_az": "Zərərverici + ağ milçək",
+  "decision_inputs": {
+    "environment": {"temperature_c": 24, "humidity_pct": 60, "co2_ppm": 390, "light_hours": 14},
+    "ventilation": {"fan_status": "on", "vent_open_pct": 35},
+    "irrigation": {"water_available": true, "soil_moisture_pct": 26, "last_watered_hours": 10},
+    "crops": {"stage": "flowering", "health": "good"},
+    "pests": {"whiteflies": true, "thrips": true, "aphids": false},
+    "diseases": {"fungal_signs": false, "bacterial_signs": false, "virus_signs": false}
+  }
+}

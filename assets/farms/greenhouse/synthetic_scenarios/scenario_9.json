@@ -1,0 +1,13 @@
+{
+  "farm_type": "greenhouse",
+  "scenario_id": "greenhouse_09",
+  "summary_az": "Xəstəlik + göbələk infeksiyası",
+  "decision_inputs": {
+    "environment": {"temperature_c": 19, "humidity_pct": 88, "co2_ppm": 420, "light_hours": 11},
+    "ventilation": {"fan_status": "off", "vent_open_pct": 15},
+    "irrigation": {"water_available": true, "soil_moisture_pct": 35, "last_watered_hours": 5},
+    "crops": {"stage": "flowering", "health": "poor"},
+    "pests": {"whiteflies": false, "thrips": false, "aphids": false},
+    "diseases": {"fungal_signs": true, "bacterial_signs": false, "virus_signs": false}
+  }
+}

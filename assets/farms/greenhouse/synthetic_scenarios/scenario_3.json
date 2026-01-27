@@ -1,0 +1,13 @@
+{
+  "farm_type": "greenhouse",
+  "scenario_id": "greenhouse_03",
+  "summary_az": "Aşağı temp + isitmə lazım",
+  "decision_inputs": {
+    "environment": {"temperature_c": 12, "humidity_pct": 70, "co2_ppm": 420, "light_hours": 10},
+    "ventilation": {"fan_status": "off", "vent_open_pct": 0},
+    "irrigation": {"water_available": true, "soil_moisture_pct": 30, "last_watered_hours": 18},
+    "crops": {"stage": "vegetative", "health": "stressed"},
+    "pests": {"whiteflies": false, "thrips": false, "aphids": false},
+    "diseases": {"fungal_signs": false, "bacterial_signs": false, "virus_signs": false}
+  }
+}

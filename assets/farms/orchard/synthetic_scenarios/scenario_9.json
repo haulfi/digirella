@@ -1,0 +1,13 @@
+{
+  "farm_type": "orchard",
+  "scenario_id": "orchard_09",
+  "summary_az": "Yığım vaxtı + meyvə yetkinliyi",
+  "decision_inputs": {
+    "weather": {"temperature_c": 23, "humidity_pct": 55, "wind_kph": 8, "rain_mm_24h": 0, "forecast_frost": false},
+    "soil": {"moisture_pct": 25, "soil_temp_c": 21},
+    "trees": {"stage": "harvest_ready", "fruit_load": "normal", "health_status": "good"},
+    "pests": {"codling_moth_detected": false, "aphids_detected": false, "mites_detected": false},
+    "diseases": {"fire_blight_signs": false, "scab_signs": false, "mildew_signs": false},
+    "resources": {"water_available": true, "labor_available": true}
+  }
+}

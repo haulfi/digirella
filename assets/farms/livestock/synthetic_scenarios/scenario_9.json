@@ -1,0 +1,13 @@
+{
+  "farm_type": "livestock",
+  "scenario_id": "livestock_09",
+  "summary_az": "Orta sağlamlıq problemi + yem çatdırılması",
+  "decision_inputs": {
+    "environment": {"temperature_c": 25, "humidity_pct": 64},
+    "resources": {"feed_kg": 480, "water_liters": 1750},
+    "production": {"milk_liters": 370},
+    "livestock": {"animal_count": 20},
+    "health": {"sick_count": 1, "disease_detected": false, "stress_signs": false},
+    "constraints": {"vet_available": true, "feed_delivery_expected": true}
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "farm_type": "mixed",
+  "scenario_id": "mixed_03",
+  "summary_az": "Heyvanlar yem tələb edir",
+  "decision_inputs": {
+    "crops": {"soil_moisture_pct": 26, "stage": "vegetative", "health": "good", "pest_pressure": "low"},
+    "livestock": {"animal_count": 10, "feed_kg": 20, "water_liters": 130, "sick_count": 0},
+    "resources": {"labor_hours": 8, "water_available": true, "budget_available": true},
+    "weather": {"temperature_c": 25, "rain_mm_24h": 2, "forecast_rain_48h": 0}
+  }
+}

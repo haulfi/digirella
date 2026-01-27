@@ -1,0 +1,13 @@
+{
+  "farm_type": "orchard",
+  "scenario_id": "orchard_06",
+  "summary_az": "Çox meyvə + seyrəltmə lazım",
+  "decision_inputs": {
+    "weather": {"temperature_c": 25, "humidity_pct": 50, "wind_kph": 12, "rain_mm_24h": 0, "forecast_frost": false},
+    "soil": {"moisture_pct": 24, "soil_temp_c": 22},
+    "trees": {"stage": "fruit_development", "fruit_load": "heavy", "health_status": "good"},
+    "pests": {"codling_moth_detected": false, "aphids_detected": false, "mites_detected": false},
+    "diseases": {"fire_blight_signs": false, "scab_signs": false, "mildew_signs": false},
+    "resources": {"water_available": true, "labor_available": true}
+  }
+}

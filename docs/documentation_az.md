@@ -1,0 +1,344 @@
+# DigiRella - Kənd Təsərrüfatı Qərar Dəstək Sistemi
+
+## 📖 İstifadəçi Təlimatı
+
+### Sistemin Məqsədi
+
+DigiRella süni intellekt əsaslı kənd təsərrüfatı qərar dəstək sistemidir. Bu sistem real vaxt sensor məlumatları və ətraf mühit şəraitinə əsasən ağıllı təsərrüfat tövsiyələri təqdim edir.
+
+### Əsas İmkanlar
+
+- ✅ **Müxtəlif Təsərrüfat Tipləri**: Buğda, heyvandarlıq, bağçılıq, istixana və qarışıq təsərrüfat
+- ✅ **Ağıllı Tövsiyələr**: Hava, torpaq, bitki mərhələsi və resurs mövcudluğuna əsaslı qərarlar
+- ✅ **Konflikt Həlli**: Ziddiyyətli fəaliyyətlərin avtomatik prioritetləşdirilməsi
+- ✅ **Çoxdilli Dəstək**: Azərbaycan dilində tövsiyələr
+- ✅ **İnteraktiv İnterfeys**: Ssenari seçimi və chatbot
+
+---
+
+## 🚀 Sistemi İşə Salma
+
+### 1. Backend Serveri Başlatma
+
+```bash
+cd backend
+uvicorn app:app --reload --host 0.0.0.0 --port 8000
+```
+
+Server `http://127.0.0.1:8000` ünvanında işə düşəcək.
+
+### 2. Frontend İnterfeysini Açma
+
+- `frontend/index.html` faylını brauzerdə açın
+- Və ya yerli veb server ilə:
+  ```bash
+  cd frontend
+  python -m http.server 8080
+  ```
+- `http://localhost:8080` ünvanına keçin
+
+---
+
+## 💻 İstifadə Təlimatı
+
+### Addım 1: API-yə Qoşulma
+
+1. **API Baza Ünvanı** sahəsinə backend serverinizin ünvanını daxil edin
+   - Standart: `http://127.0.0.1:8000`
+2. **"Bağlan"** düyməsini klikləyin
+3. Sistem təsərrüfat tiplərini avtomatik yükləyəcək
+
+### Addım 2: Təsərrüfat Tipi Seçimi
+
+Mövcud təsərrüfat tiplərindən birini seçin:
+
+- **🌾 Buğda (Wheat)**: Taxıl bitkisi becərməsi
+- **🐄 Heyvandarlıq (Livestock)**: Süd inəkləri idarəetməsi
+- **🍎 Bağçılıq (Orchard)**: Meyvə ağacları becərməsi
+- **🏠 İstixana (Greenhouse)**: Qorunan bitki istehsalı
+- **🌱 Qarışıq (Mixed)**: İnteqrasiya olunmuş bitki və heyvan təsərrüfatı
+
+### Addım 3: Ssenari Seçimi
+
+1. Təsərrüfat tipi seçildikdən sonra mövcud ssenarilər yüklənəcək
+2. Ssenarini klikləyərək seçin
+3. Hər ssenari müəyyən hava şəraiti, torpaq vəziyyəti və resurs mövcudluğunu təmsil edir
+
+### Addım 4: Tövsiyələri Oxuma
+
+Ssenari seçildikdən sonra sistem iki siyahı göstərəcək:
+
+#### ✅ Edilməli (Tövsiyələr)
+- Bu gün görülməli fəaliyyətlər
+- Hər fəaliyyət üçün prioritet səviyyəsi: **yüksək**, **orta**, **aşağı**
+- Hər tövsiyənin ətraflı səbəbləri
+
+#### ❌ Edilməməli (Məhdudiyyətlər)
+- Hazırki şəraitdə görülməməli fəaliyyətlər
+- Məhdudiyyətlərin səbəbləri
+
+### Addım 5: Chatbot ilə Söhbət
+
+Ssenari haqqında sual verin:
+
+**Nümunə suallar:**
+- "Bu gün nə etməliyəm?"
+- "Vəziyyət necədir?"
+- "Niyə suvarma tövsiyə olunur?"
+- "Hava şəraiti necədir?"
+
+**Qeyd:** Chatbot hər sorğuda avtomatik olaraq ssenari 1-i seçir.
+
+---
+
+## 📊 Tövsiyə Nümunələri
+
+### Buğda Təsərrüfatı
+
+**Ssenari:** Quraqlıq və isti hava şəraiti
+
+**Edilməli:**
+- **Suvarma** (yüksək prioritet)
+  - Torpaq rütubəti aşağıdır (16%)
+  - Quru şərait var (son 24 saat yağış=0 mm)
+  - Növbəti 48 saatda yağış gözlənilmir
+
+**Edilməməli:**
+- **Gübrələmə**
+  - Torpaq çox quru, gübrə həll olmayacaq
+  - Gübrə itki riski yüksəkdir
+
+### Heyvandarlıq Təsərrüfatı
+
+**Ssenari:** İsti stress riski
+
+**Edilməli:**
+- **Su çıxışını artırın** (yüksək prioritet)
+  - İsti stress riski (temp=32°C)
+  - Susuzlaşma təhlükəsi
+- **Kölgə təmin edin**
+  - Heyvanları sərin saxlayın
+
+**Edilməməli:**
+- **Heyvanları hərəkət etdirməyin**
+  - İsti vaxtda hərəkət stress yaradır
+
+---
+
+## 🎯 Qərar Məntiqi
+
+### Sistem Necə İşləyir?
+
+1. **Məlumat Toplama**: Sensor və müşahidə məlumatları
+2. **Təhlil**: Hava, torpaq, bitki mərhələsi analizi
+3. **Qaydaların Tətbiqi**: Təsərrüfat tipinə xas qərar qaydaları
+4. **Konflikt Həlli**: Ziddiyyətli tövsiyələrin həlli
+5. **Nəticənin Formalaşdırılması**: Azərbaycan dilində tövsiyələr
+
+### Prioritet Sistemi
+
+- **Yüksək**: Təcili fəaliyyətlər, bitki/heyvan sağlamlığı riskləri
+- **Orta**: Vaxtında görülməli planlı fəaliyyətlər
+- **Aşağı**: İxtiyari, məsləhət xarakterli tövsiyələr
+
+### Konflikt Həlli Qaydaları
+
+1. **Yüksək prioritet qalib gəlir**: Eyni fəaliyyət üçün ən yüksək prioritetli tövsiyə qəbul edilir
+2. **"Edilməməli" bloklar**: Əgər fəaliyyət "edilməməli" siyahısındadırsa, "edilməli"dən çıxarılır
+3. **Səbəblərin birləşdirilməsi**: Eyni tövsiyə üçün bütün səbəblər göstərilir
+
+---
+
+## 📋 Ssenari Strukturu
+
+Hər ssenari aşağıdakı məlumatları ehtiva edir:
+
+### Buğda Ssenarisində
+
+**Hava Məlumatları:**
+- Maksimum temperatur (°C)
+- Rütubət (%)
+- Son 24 saat yağış (mm)
+- 48 saatlıq yağış proqnozu (mm)
+- Külək sürəti (m/s)
+
+**Torpaq Məlumatları:**
+- Torpaq rütubəti (%)
+
+**Bitki Məlumatları:**
+- Böyümə mərhələsi (kolların çoxalması, çiçəkləmə, və s.)
+
+**Məhdudiyyətlər:**
+- Su mövcudluğu
+- Suvarma imkanı
+
+**Müşahidələr:**
+- Zərərvericilərin olması (yarpaq biti, və s.)
+- Xəstəlik əlamətləri (pas, və s.)
+
+### Heyvandarlıq Ssenarisində
+
+**Mühit:**
+- Temperatur (°C)
+- Rütubət (%)
+
+**Resurslar:**
+- Yem miqdarı (kq)
+- Su miqdarı (litr)
+
+**İstehsal:**
+- Süd məhsuldarlığı (litr)
+
+**Sağlamlıq:**
+- Xəstə heyvan sayı
+- Stress əlamətləri
+
+---
+
+## ⚙️ Texniki Məlumat
+
+### API Endpointləri
+
+#### Təsərrüfat Tiplərini Əldə Etmə
+```
+GET /v1/farm-types
+```
+
+#### Ssenarilərə Baxma
+```
+GET /v1/farms/{farm_type}/scenarios
+```
+
+#### Tövsiyələrin Alınması
+```
+POST /v1/recommendations
+{
+  "farm_type": "wheat",
+  "scenario_id": 1,
+  "language": "az"
+}
+```
+
+### Məlumat Axını
+
+```
+İstifadəçi → Ssenari Seçir
+    ↓
+API Sorğusu → Backend Server
+    ↓
+Model İcra Edilir → Qaydalar Tətbiq Edilir
+    ↓
+Nəticə Formatlaşdırılır → Azərbaycan Dilinə Tərcümə
+    ↓
+Frontend → Tövsiyələr Göstərilir
+```
+
+---
+
+## 🔍 Tez-Tez Verilən Suallar
+
+### S: Niyə bəzi fəaliyyətlər həm "edilməli", həm də "edilməməli" siyahılarında görünmür?
+
+C: Sistem konflikt həlli mexanizmi ilə ziddiyyətli tövsiyələri avtomatik həll edir. "Edilməməli" siyahısındakı fəaliyyətlər "edilməli" siyahısından avtomatik silinir.
+
+### S: Prioritetlər necə müəyyən edilir?
+
+C: Prioritetlər aşağıdakı amillərə əsasən verilir:
+- Bitki/heyvan sağlamlığı riskləri
+- Hava şəraiti təcililiyi
+- Resurs mövcudluğu
+- Böyümə mərhələsinin kritikliyi
+
+### S: Chatbot hansı dildə cavab verir?
+
+C: Chatbot hazırda yalnız Azərbaycan dilində cavab verir. Sistem çoxdilli dəstək üçün hazırlanıb və gələcəkdə başqa dillər əlavə edilə bilər.
+
+### S: Öz ssenarilərimi necə əlavə edə bilərəm?
+
+C: Yeni ssenari əlavə etmək üçün:
+1. `assets/farms/{farm_type}/synthetic_scenarios/` qovluğuna keçin
+2. `scenario_X.json` formatında yeni fayl yaradın
+3. Ssenari strukturunu digər fayllardan nümunə götürərək doldurun
+4. Serveri yenidən başladın
+
+### S: Sistem internetdən asılıdır?
+
+C: Xeyr. DigiRella tam offline işləyə bilir. Backend və frontend yerli kompüterdə işə düşür və internet bağlantısı tələb etmir.
+
+---
+
+## 🛠️ Problemlərin Həlli
+
+### Problem: Backend başlamır
+
+**Həll:**
+```bash
+# Python versiyasını yoxlayın
+python --version  # 3.13 və ya daha yeni olmalıdır
+
+# Asılılıqları quraşdırın
+pip install -r backend/requirements.txt
+
+# Detallı log ilə başladın
+uvicorn app:app --reload --log-level debug
+```
+
+### Problem: Frontend API-yə qoşula bilmir
+
+**Həll:**
+1. Backend-in işlədiyini yoxlayın: `http://127.0.0.1:8000/health`
+2. CORS parametrlərini yoxlayın `backend/app.py` faylında
+3. Brauzer konsolunda xəta mesajlarına baxın
+4. Firewall və ya antivirus proqramlarını yoxlayın
+
+### Problem: Tövsiyələr göstərilmir
+
+**Həll:**
+1. Ssenari düzgün seçildiyini təsdiq edin
+2. Backend loglarına baxın
+3. Ssenari JSON faylının düzgün formatda olduğunu yoxlayın
+4. Təsərrüfat tipinin düzgün qeydiyyatdan keçdiyini yoxlayın
+
+### Problem: Chatbot cavab vermir
+
+**Həll:**
+1. Əvvəlcə təsərrüfat tipi seçin
+2. Chatbot Azərbaycan dilində sual gözləyir
+3. Nümunə sualları istifadə edin: "Bu gün nə edim?"
+
+---
+
+## 📞 Əlaqə və Dəstək
+
+**Texniki Dəstək:**
+- E-mail: support@digirella.az
+- Telefon: +994 XX XXX XX XX
+
+**Təlim və Məsləhət:**
+- Veb sayt: www.digirella.az
+- Aqronom məsləhətçilər: agronomist@digirella.az
+
+---
+
+## 🌟 Tövsiyələr
+
+### İstifadə üçün ən yaxşı təcrübələr:
+
+1. **Gündəlik Yoxlama**: Hər gün səhər tövsiyələrə baxın
+2. **Hava Proqnozu**: 48 saatlıq hava proqnozunu nəzərə alın
+3. **Prioritetlərə Diqqət**: Yüksək prioritetli tövsiyələri ilk növbədə yerinə yetirin
+4. **Resurs Planlaması**: Məhdudiyyətlərə əsasən resurslarınızı planlaşdırın
+5. **Qeydlər**: Fəaliyyətlərin nəticələrini qeyd edin və müqayisə edin
+
+### Təhlükəsizlik Məsləhətləri:
+
+- ⚠️ Həmişə yerli aqronom məsləhəti ilə tövsiyələri təsdiqləyin
+- ⚠️ Həddindən artıq gübrə və kimyəvi maddə istifadəsindən çəkinin
+- ⚠️ Hava şəraiti dəyişikliklərini real vaxtda izləyin
+- ⚠️ Heyvan sağlamlığı problemləri zamanı dərhal veterinar çağırın
+
+---
+
+**DigiRella ilə məhsuldarlığınızı artırın! 🌱**
+
+*Versiya: 1.0.0 | Son yeniləmə: 2025*

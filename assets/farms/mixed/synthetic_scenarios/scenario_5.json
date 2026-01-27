@@ -1,0 +1,11 @@
+{
+  "farm_type": "mixed",
+  "scenario_id": "mixed_05",
+  "summary_az": "Su çatışmazlığı + bölüşdürmə",
+  "decision_inputs": {
+    "crops": {"soil_moisture_pct": 16, "stage": "fruit_development", "health": "stressed", "pest_pressure": "low"},
+    "livestock": {"animal_count": 10, "feed_kg": 70, "water_liters": 60, "sick_count": 0},
+    "resources": {"labor_hours": 8, "water_available": false, "budget_available": true},
+    "weather": {"temperature_c": 34, "rain_mm_24h": 0, "forecast_rain_48h": 0}
+  }
+}

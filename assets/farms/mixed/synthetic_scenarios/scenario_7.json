@@ -1,0 +1,11 @@
+{
+  "farm_type": "mixed",
+  "scenario_id": "mixed_07",
+  "summary_az": "Bitki zərərverici + heyvan sağlamlıq",
+  "decision_inputs": {
+    "crops": {"soil_moisture_pct": 27, "stage": "vegetative", "health": "good", "pest_pressure": "high"},
+    "livestock": {"animal_count": 10, "feed_kg": 55, "water_liters": 135, "sick_count": 3},
+    "resources": {"labor_hours": 8, "water_available": true, "budget_available": true},
+    "weather": {"temperature_c": 26, "rain_mm_24h": 4, "forecast_rain_48h": 2}
+  }
+}

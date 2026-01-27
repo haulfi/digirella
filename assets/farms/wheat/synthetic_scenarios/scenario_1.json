@@ -1,0 +1,15 @@
+{
+  "farm_type": "wheat",
+  "schema_version": "1.0",
+  "scenario_id": "WHEAT_01",
+  "scenario_number": "1",
+  "decision_inputs": {
+    "weather": { "t_max_c": 35, "t_min_c": 21, "rain_mm_24h": 0, "forecast_rain_mm_48h": 0, "wind_mps": 2, "humidity_pct": 25 },
+    "soil": { "soil_moisture_pct": 16, "soil_temp_c": 24 },
+    "crop": { "stage_code": "tillering" },
+    "constraints": { "water_available": true, "irrigation_possible_today": true, "labor_hours_today": 6 },
+    "observations": { "pest_aphids_seen": false, "disease_rust_seen": false, "weed_pressure": "low" }
+  },
+  "summary_az": "İsti + quru + az rütubət"
+
+}

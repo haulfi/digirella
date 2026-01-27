@@ -1,0 +1,13 @@
+{
+  "farm_type": "livestock",
+  "scenario_id": "livestock_06",
+  "summary_az": "Su doldurma tələb olunur",
+  "decision_inputs": {
+    "environment": {"temperature_c": 26, "humidity_pct": 55},
+    "resources": {"feed_kg": 590, "water_liters": 600},
+    "production": {"milk_liters": 390},
+    "livestock": {"animal_count": 20},
+    "health": {"sick_count": 0, "disease_detected": false, "stress_signs": false},
+    "constraints": {"vet_available": true, "feed_delivery_expected": false}
+  }
+}

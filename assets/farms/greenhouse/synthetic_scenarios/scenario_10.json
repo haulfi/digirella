@@ -1,0 +1,13 @@
+{
+  "farm_type": "greenhouse",
+  "scenario_id": "greenhouse_10",
+  "summary_az": "Kombinə problem + isti + rütubət + zərərverici",
+  "decision_inputs": {
+    "environment": {"temperature_c": 33, "humidity_pct": 85, "co2_ppm": 350, "light_hours": 15},
+    "ventilation": {"fan_status": "on", "vent_open_pct": 60},
+    "irrigation": {"water_available": true, "soil_moisture_pct": 22, "last_watered_hours": 16},
+    "crops": {"stage": "flowering", "health": "stressed"},
+    "pests": {"whiteflies": true, "thrips": true, "aphids": true},
+    "diseases": {"fungal_signs": true, "bacterial_signs": false, "virus_signs": false}
+  }
+}

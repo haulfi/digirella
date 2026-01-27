@@ -1,0 +1,13 @@
+{
+  "farm_type": "livestock",
+  "scenario_id": "livestock_04",
+  "summary_az": "İsti + soyutma + su lazımdır",
+  "decision_inputs": {
+    "environment": {"temperature_c": 32, "humidity_pct": 75},
+    "resources": {"feed_kg": 580, "water_liters": 1500},
+    "production": {"milk_liters": 350},
+    "livestock": {"animal_count": 20},
+    "health": {"sick_count": 0, "disease_detected": false, "stress_signs": true},
+    "constraints": {"vet_available": true, "feed_delivery_expected": false}
+  }
+}

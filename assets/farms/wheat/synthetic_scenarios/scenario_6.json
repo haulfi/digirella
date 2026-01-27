@@ -1,0 +1,14 @@
+{
+  "farm_type": "wheat",
+  "schema_version": "1.0",
+  "scenario_id": "WHEAT_06",
+  "scenario_number": "6",
+  "decision_inputs": {
+    "weather": { "t_max_c": 29, "t_min_c": 16, "rain_mm_24h": 0, "forecast_rain_mm_48h": 0, "wind_mps": 4, "humidity_pct": 40 },
+    "soil": { "soil_moisture_pct": 21, "soil_temp_c": 18 },
+    "crop": { "stage_code": "stem_elongation" },
+    "constraints": { "water_available": true, "irrigation_possible_today": true, "labor_hours_today": 5 },
+    "observations": { "pest_aphids_seen": false, "disease_rust_seen": false, "weed_pressure": "low" }
+  },
+  "summary_az": "Saplaq uzanması + rütubət düşür"
+}

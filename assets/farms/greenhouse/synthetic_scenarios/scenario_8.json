@@ -1,0 +1,13 @@
+{
+  "farm_type": "greenhouse",
+  "scenario_id": "greenhouse_08",
+  "summary_az": "Əkilmə vaxtı + şitillər hazır",
+  "decision_inputs": {
+    "environment": {"temperature_c": 21, "humidity_pct": 62, "co2_ppm": 410, "light_hours": 14},
+    "ventilation": {"fan_status": "on", "vent_open_pct": 25},
+    "irrigation": {"water_available": true, "soil_moisture_pct": 30, "last_watered_hours": 8},
+    "crops": {"stage": "transplant_ready", "health": "good"},
+    "pests": {"whiteflies": false, "thrips": false, "aphids": false},
+    "diseases": {"fungal_signs": false, "bacterial_signs": false, "virus_signs": false}
+  }
+}

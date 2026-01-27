@@ -1,0 +1,13 @@
+{
+  "farm_type": "greenhouse",
+  "scenario_id": "greenhouse_06",
+  "summary_az": "Qida çatışmazlığı + fertigasiya",
+  "decision_inputs": {
+    "environment": {"temperature_c": 23, "humidity_pct": 58, "co2_ppm": 370, "light_hours": 13},
+    "ventilation": {"fan_status": "on", "vent_open_pct": 30},
+    "irrigation": {"water_available": true, "soil_moisture_pct": 25, "last_watered_hours": 14},
+    "crops": {"stage": "vegetative", "health": "poor"},
+    "pests": {"whiteflies": false, "thrips": false, "aphids": false},
+    "diseases": {"fungal_signs": false, "bacterial_signs": false, "virus_signs": false}
+  }
+}

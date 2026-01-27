@@ -1,0 +1,13 @@
+{
+  "farm_type": "greenhouse",
+  "scenario_id": "greenhouse_02",
+  "summary_az": "Yüksək temp + soyutma lazım",
+  "decision_inputs": {
+    "environment": {"temperature_c": 35, "humidity_pct": 55, "co2_ppm": 380, "light_hours": 15},
+    "ventilation": {"fan_status": "on", "vent_open_pct": 50},
+    "irrigation": {"water_available": true, "soil_moisture_pct": 24, "last_watered_hours": 8},
+    "crops": {"stage": "flowering", "health": "stressed"},
+    "pests": {"whiteflies": false, "thrips": false, "aphids": false},
+    "diseases": {"fungal_signs": false, "bacterial_signs": false, "virus_signs": false}
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "farm_type": "greenhouse",
+  "scenario_id": "greenhouse_04",
+  "summary_az": "Yüksək rütubət + xəstəlik riski",
+  "decision_inputs": {
+    "environment": {"temperature_c": 20, "humidity_pct": 92, "co2_ppm": 410, "light_hours": 12},
+    "ventilation": {"fan_status": "off", "vent_open_pct": 10},
+    "irrigation": {"water_available": true, "soil_moisture_pct": 32, "last_watered_hours": 6},
+    "crops": {"stage": "vegetative", "health": "good"},
+    "pests": {"whiteflies": false, "thrips": false, "aphids": false},
+    "diseases": {"fungal_signs": false, "bacterial_signs": false, "virus_signs": false}
+  }
+}
