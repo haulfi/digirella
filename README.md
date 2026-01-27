@@ -37,12 +37,18 @@
    pip install -r requirements.txt
    ```
 
-3. **Start the backend server**
+3. **Code Change idex.html line:43**
+    delete:
+      <input id="apiBase" type="text" value="https://digirella-alfalfa.onrender.com" /> <!--Running on render.com-->
+    uncomment:
+      <!-- <input id="apiBase" type="text" value="http://127.0.0.1:8000" /> Running on localhost-->
+
+4. **Start the backend server**
    ```bash
    uvicorn app:app --reload --host 0.0.0.0 --port 8000
    ```
 
-4. **Open the frontend**
+5. **Open the frontend**
    - Open `frontend/index.html` in your browser
    - Or serve with a local web server:
      ```bash
