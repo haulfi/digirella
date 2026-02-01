@@ -90,7 +90,7 @@ DigiRella/
 ├── frontend/                   # Original frontend (archived)
 └── requirements.txt          # Python dependencies
 ```
-
+**Note: You dont need copied files in dcs folder. They are there for deploying in render**
 ## 🔧 Architecture
 
 ### Backend Architecture
