@@ -7,7 +7,7 @@
 // Documentation content in Azerbaijani (embedded for offline access)
 //----------------------------------------------------------------------------------------------------------------------------
 const DOCUMENTATION_AZ = `
-# DigiRella - Kənd Təsərrüfatı Qərar Dəstək Sistemi
+# DigiRella - Kənd Təsərrüfatı Dəstək Sistemi
 
 ## 📖 İstifadəçi Təlimatı
 

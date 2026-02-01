@@ -60,17 +60,6 @@ The live demo is fully functional. Select a farm type, choose a scenario, and ex
      ```
    - Navigate to `http://localhost:8080`
 
-5. **Update API URL for local development**
-   - Open `docs/index.html`
-   - Change line 44 from:
-     ```html
-     <input id="apiBase" type="text" value="https://digirella-alfalfa.onrender.com" />
-     ```
-   - To:
-     ```html
-     <input id="apiBase" type="text" value="http://127.0.0.1:8000" />
-     ```
-
 ## 📁 Project Structure
 
 ```
