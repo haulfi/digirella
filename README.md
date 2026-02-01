@@ -41,14 +41,13 @@ The live demo is fully functional. Select a farm type, choose a scenario, and ex
 
 2. **Install Python dependencies**
    ```bash
-   cd backend
    pip install -r requirements.txt
    ```
 
 3. **Start the backend server**
    ```bash
    cd backend
-   uvicorn app:app --reload --host 0.0.0.0 --port 8000
+   uvicorn backend.app:app --reload --host 0.0.0.0 --port 8000
    ```
 
 4. **Open the frontend**
