@@ -25,6 +25,7 @@ const ACTION_LABELS = {
   SCOUT_APHIDS: "Yarpaqbiti müşahidəsi var",
   RUST_RISK_ALERT: "Pas riski xəbərdarlığı",
   AVOID_SPRAY_MIDDAY: "Günortadan sonra səpin etmək olmaz!",
+  MONITOR_IRRIGATION : "Suvarmağı planlaşdır",
 
   // Livestock actions
   ORDER_FEED_URGENT: "Təcili yem sifariş et!",
