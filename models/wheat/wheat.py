@@ -94,6 +94,18 @@ class WheatModel(BaseModel):
                     reason("delay_or_reduce_irrigation"),
                 ]
             )
+        # Adequate moisture but borderline low (20-25%) with dry conditions - monitor and prepare
+        elif moisture_bucket == "adequate" and ctx.sm <= 25 and not rain_coming and not wet_bucket:
+            self._add_rec(
+                recs,
+                "MONITOR_IRRIGATION",
+                "low",
+                [
+                    reason("soil_moisture_borderline", sm=ctx.sm),
+                    reason("dry_conditions", rain24=ctx.rain24, humidity=ctx.humidity),
+                    reason("consider_irrigation_soon"),
+                ]
+            )
         # Irrigation is not recommended - soil is already wet or has high moisture
         elif wet_bucket or moisture_bucket == "high":
             self._add_not(

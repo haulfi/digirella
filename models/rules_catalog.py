@@ -35,6 +35,8 @@ _TEMPLATES = {
             "delay_or_reduce_irrigation": "Suva qənaət üçün suvarmanı gecikdirin və ya azaldın.",
             "wet_conditions": "Şərait rütubətlidir (rütubət={humidity}%, son 24 saat yağış={rain24} mm).",
             "soil_moisture_level": "Torpaq rütubəti {moisture_bucket} səviyyədədir ({sm}%).",
+            "soil_moisture_borderline": "Torpaq rütubəti kafi, lakin aşağı həddə yaxındır ({sm}%).",
+            "consider_irrigation_soon": "Yaxın günlərdə suvarma planlaşdırın.",
 
             # Fertilization reasons
             "stage_is": "Mərhələ: {stage}.",
